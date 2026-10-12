@@ -37,9 +37,9 @@ jobs:
     - name: SSH and deploy to Ec2
       uses: appleboy/ssh-action@v1
       with:
-        host: ${{ secrets.EC2_HOST_1 }}
+        host: ${{ secrets.EC2_HOST }}
         username: ${{ secrets.EC2_USER }}
-        key: ${{ secrets.EC2_SSH_KEY_1 }}
+        key: ${{ secrets.EC2_SSH_KEY }}
         port: ${{ secrets.PORT }}
         script: |
           docker stop ci-demo | true
